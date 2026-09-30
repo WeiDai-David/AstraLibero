@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "astra-libero-semantic"
+version = "0.1.0"
+dependencies = ["numpy>=1.24,<2", "pydantic>=2", "pyyaml", "Pillow", "python-dotenv", "httpx>=0.27,<1", "imageio==2.34.2", "imageio-ffmpeg==0.6.0"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*"]

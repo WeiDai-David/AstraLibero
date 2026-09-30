@@ -1,0 +1,17 @@
+# Validated Windows runtime; LIBERO source installed separately.
+numpy==1.26.4
+robosuite==1.4.0
+mujoco==2.3.7
+bddl==1.0.1
+opencv-python==4.8.1.78
+numba==0.60.0
+gym==0.25.2
+PyOpenGL==3.1.7
+matplotlib==3.8.4
+imageio==2.34.2
+imageio-ffmpeg==0.6.0
+httpx==0.28.1
+future==1.0.0
+termcolor==3.3.0
+easydict
+cloudpickle

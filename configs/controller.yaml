@@ -1,0 +1,25 @@
+controller:
+  granularity: 3
+  translation_magnitudes:
+    COARSE: 0.05
+    NORMAL: 0.02
+    FINE: 0.005
+  rotation_degrees:
+    COARSE: 12.0
+    NORMAL: 5.0
+    FINE: 2.0
+  gripper:
+    OPEN: -1.0
+    HOLD: 0.0
+    CLOSE: 1.0
+  workspace: null
+  max_translation_norm: null
+  max_rotation_norm: null
+  translation_repeat:
+    COARSE: 3
+    NORMAL: 2
+    FINE: 1
+  rotation_repeat:
+    COARSE: 2
+    NORMAL: 1
+    FINE: 1

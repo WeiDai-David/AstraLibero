@@ -1,0 +1,71 @@
+environment:
+  suite: libero_spatial
+  task_id: 0
+  seed: 0
+  image_size: 256
+  primary_camera: agentview
+  wrist_camera: robot0_eye_in_hand
+  control_freq: 20
+  horizon: 2010
+  settle_steps: 10
+controller:
+  granularity: 3
+  translation_magnitudes:
+    COARSE: 0.05
+    NORMAL: 0.02
+    FINE: 0.005
+  rotation_degrees:
+    COARSE: 12.0
+    NORMAL: 5.0
+    FINE: 2.0
+  gripper:
+    OPEN: -1.0
+    HOLD: 0.0
+    CLOSE: 1.0
+  workspace: null
+  max_translation_norm: null
+  max_rotation_norm: null
+  translation_repeat:
+    COARSE: 3
+    NORMAL: 2
+    FINE: 1
+  rotation_repeat:
+    COARSE: 2
+    NORMAL: 1
+    FINE: 1
+agent:
+  prompt_path: prompts/astra_semantic_policy.txt
+  timeout: 300
+  model: gpt-6-astra
+  base_url: https://sub.jzzzi.top
+  wire_api: responses
+  env_key: OPENAI_API_KEY
+  reasoning_effort: medium
+  max_retries: 5
+  request_interval_seconds: 1.0
+  initial_backoff_seconds: 2.0
+  max_backoff_seconds: 32.0
+  max_concurrency: 1
+rollout:
+  max_steps: 300
+  history_length: 4
+  max_invalid_decisions: 3
+  output_root: outputs
+  save_video: true
+calibration:
+  mode: NORMAL
+  settle_steps: 40
+  sign_tolerance_m: 1.0e-05
+  sign_tolerance_rad: 0.0001
+grasp:
+  enable_lift_test: true
+  max_grasp_retries: 3
+  lift_test_translation_m: 0.001
+  open_width_threshold_m: 0.07
+  max_open_steps: 30
+  max_verification_steps: 20
+viewer:
+  enabled: true
+  show_status_window: true
+  show_camera_window: true
+  refresh_every_steps: 1
